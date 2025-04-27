@@ -1,6 +1,8 @@
 package ru.itgirl.library_project.service;
 
+import ru.itgirl.library_project.dto.AuthorCreateDto;
 import ru.itgirl.library_project.dto.AuthorDto;
+import ru.itgirl.library_project.dto.AuthorUpdateDto;
 
 public interface AuthorService {
     AuthorDto getAuthorById(Long id);
@@ -11,4 +13,10 @@ public interface AuthorService {
 
     AuthorDto getAuthorByNameV3(String name);
 
+    AuthorDto createAuthor(AuthorCreateDto authorCreateDto);
+
+    AuthorDto updateAuthor(AuthorUpdateDto authorUpdateDto);
+
+    default void deleteAuthor(Long id) {
+    }
 }
