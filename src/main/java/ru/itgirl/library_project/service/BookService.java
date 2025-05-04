@@ -1,6 +1,10 @@
 package ru.itgirl.library_project.service;
 
 import ru.itgirl.library_project.dto.*;
+import ru.itgirl.library_project.model.Book;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public interface BookService {
     BookDto getByNameV1(String name);
@@ -13,7 +17,10 @@ public interface BookService {
 
     BookDto updateBook(BookUpdateDto bookUpdateDto);
 
+    List<BookDto> getAllBooks();
+
     default void deleteBook(Long id) {
+
     }
 }
 
